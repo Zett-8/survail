@@ -6,10 +6,11 @@ module.exports = app => {
   }));
 
   app.get('/', (req, res) => {
-    res.send('<h1>hello world</h1>');
+    res.send('<h1>Hello this is inside of the server :5000</h1>');
   });
 
-  app.get('/auth/google/callback', passport.authenticate('google'));
+  app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => res.redirect('/surveys'));
+
 
   app.get('/api/current_user', (req, res) => {
     res.send(req.user);
@@ -17,7 +18,7 @@ module.exports = app => {
 
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.send(req.user);
+    res.redirect('/');
   })
 
 };
