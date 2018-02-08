@@ -8,6 +8,7 @@ import App from './components/App';
 import rootReducer from './reducers';
 import 'materialize-css/dist/css/materialize.min.css';
 
+
 const store = createStore(rootReducer, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
