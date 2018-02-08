@@ -1,8 +1,0 @@
-node_modules
-dev.js
-.DS_Store
-client/.env.development
-client/.env.production
-client/.gitignore
-
-.gitignore
